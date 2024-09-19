@@ -12,5 +12,13 @@ public class Thread {
         for(int i=bandas[0]; i<=bandas[1]; i++){
             System.out.println(i);
         }
+
+        while (true) {
+            try {
+                wait(5000);   //Se detiene para los 5 segundos
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

@@ -25,13 +25,6 @@ public class Main {
         for(int i=bandas[0]; i<=bandas[1]; i++){
             System.out.println("Numero de iteraciones");
         }
-
-        /*
-        PiDigits.run();
-        New Treahd = Thread intervalo1();
-        intervalo1.start();
-        intervalo1.start();*/
-
     }
 
     private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
@@ -45,7 +38,7 @@ public class Main {
         }
         StringBuilder sb=new StringBuilder();
         for (int i=0;i<hexChars.length;i=i+2){
-            //sb.append(hexChars[i]);
+            sb.append(hexChars[i]);
             sb.append(hexChars[i+1]);            
         }
         return sb.toString();
