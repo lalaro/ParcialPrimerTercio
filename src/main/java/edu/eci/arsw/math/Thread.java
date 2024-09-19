@@ -7,14 +7,10 @@ public class Thread {
         this.bandas = bandas;
     }
 
-    /*
-    @Override
     public void run(){
 
         for(int i=bandas[0]; i<=bandas[1]; i++){
-
             System.out.println(i);
         }
-
-    }*/
+    }
 }

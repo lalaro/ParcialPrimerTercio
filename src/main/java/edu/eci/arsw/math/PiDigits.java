@@ -6,12 +6,13 @@ package edu.eci.arsw.math;
 ///  https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula
 ///  *** Translated from C# code: https://github.com/mmoroney/DigitsOfPi ***
 ///  </summary>
-public class PiDigits {
+
+public class PiDigits{
 
     private static int DigitsPerSum = 8;
     private static double Epsilon = 1e-17;
 
-    
+    private boolean paused = false;
     /**
      * Returns a range of hexadecimal digits of pi.
      * @param start The starting location of the range.
@@ -19,11 +20,7 @@ public class PiDigits {
      * @return An array containing the hexadecimal digits.
      */
     public static byte[] getDigits(int start, int count, int N) {
-        /*if (
 
-        ) else (ThreadsException e){
-            N.wait(5000);
-        }*/
         if (start < 0) {
             throw new RuntimeException("Invalid Interval");
         }
@@ -113,6 +110,12 @@ public class PiDigits {
         }
 
         return result;
+    }
+
+    public void pausePiDigits() {
+        synchronized (this) {
+            paused = true;
+        }
     }
 
 }
