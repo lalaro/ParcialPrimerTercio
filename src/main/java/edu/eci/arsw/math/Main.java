@@ -15,12 +15,10 @@ public class Main {
 
     private static int[] bandas = new int[2];
 
-
     public static void main(String a[]) {
         System.out.println(bytesToHex(PiDigits.getDigits(0, 10, 6)));
         System.out.println(bytesToHex(PiDigits.getDigits(1, 100, 6)));
         System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000, 7)));
-
 
         for(int i=bandas[0]; i<=bandas[1]; i++){
             System.out.println("Numero de iteraciones");

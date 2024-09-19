@@ -116,6 +116,15 @@ public class PiDigits{
         synchronized (this) {
             paused = true;
         }
+
+        while (true) {
+            try {
+                wait(5000);   //Se detiene para los 5 segundos
+                System.out.println("Se está deteniendo en 5 segundos");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }
